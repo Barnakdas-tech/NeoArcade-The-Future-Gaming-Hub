@@ -1,0 +1,295 @@
+body{
+    background-color:#0a0f14;
+    color:  #e0e0e0;
+    font-family:'Roboto', "sans-serif" ;
+    background-image:linear-gradient(rgba(252, 238, 10, 0.03) 1px, transparent 1px),linear-gradient(90deg, rgba(252, 238, 10, 0.03) 1px, transparent 1px) ;
+    background-size: 50px 50px;
+}
+body {
+    padding-bottom: 120px; /* space for fixed footer */
+}
+/* HEADER STYLE */
+#header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100px;
+    justify-content: space-around;
+    z-index: 50;
+    top: 0px;
+    border: 1px solid rgba(252, 238, 10, 0.3);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: #0A0F14CC;
+    backdrop-filter: blur(1px);
+}
+#header:hover{
+    border: 1px solid #FCEE0A;
+}
+#name{
+    width:600px;
+    height: auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    font-family:Orbitron, sans-serif;
+    text-shadow: 0 0 5px #FCEE0A;
+}
+#name:hover{
+    cursor: pointer;
+}
+#neo{
+    margin: 0px;
+    color: #FCEE0A ;
+}
+#arcade{
+    margin: 0px;
+    color: #FF007F;
+}
+#home1{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: roboto,sans-serif;
+    padding: 0px 0px 4px;
+}
+#home1:hover{
+    color: #FCEE0A;
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #FF007F;
+}
+#game1{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: roboto,sans-serif;
+    padding: 0px 0px 4px;
+}
+#game1:hover{
+    color: #FCEE0A;
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #FF007F;
+}
+#news1{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: roboto,sans-serif;
+    padding: 0px 0px 4px;
+}
+#news1:hover{
+    color: #FCEE0A;
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #FF007F;
+}
+#contact1{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: roboto,sans-serif;
+    padding: 0px 0px 4px;
+}
+#contact1:hover{
+    color: #FCEE0A;
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #FF007F;
+}
+#about1{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: roboto,sans-serif;
+    padding: 0px 0px 4px;
+}
+#about1:hover{
+    color: #FCEE0A;
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #FF007F;
+}
+#theme-toggle{
+    z-index: 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+#theme-toggle:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px #FCEE0A;
+}
+            
+                       /* HEADER STYLE COMPLETE */
+                    
+main {
+    padding-top: 100px;
+    padding-bottom: 120px;  
+}
+#allgames{
+    color: #FCEE0A;
+}
+
+#gamesarea{
+    text-align: center;
+    padding: 9rem 5rem 3rem 5rem ; /* keep games area 9rem from top so it doesn't sit under the fixed header */
+}
+.allgames{
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+    color: #FCEE0A;
+    text-shadow: 0 0 5px #FCEE0A;
+}
+#games{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Match the exact card styles from index.css */
+.game-card{
+    background-color: #0A0F14CC;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(252, 238, 10, 0.3);
+    border-radius: 8px;
+    padding: 20px 20px; 
+    overflow: hidden;
+}
+.game-card img{
+    display: block; 
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease; /* smooth zoom and shadow */
+    transform-origin: center center;
+}
+.game-card:hover img{
+    transform: scale(1.06); /* subtle zoom */
+    box-shadow: 0 8px 20px rgba(255,0,127,0.08), 0 0 10px rgba(252,238,10,0.12);
+}
+
+/* place the last game card in the middle column */
+#games .game-card:last-child{
+    grid-column: 2 / 3; /* put it in the center column */
+    justify-self: center;
+}
+.gamecard{
+    font-size: 24px;
+    color: #FCEE0A;
+    text-shadow: 0 0 5px #FCEE0A;
+
+}
+.genre{
+    font-size: 18px;
+    color: #FF007F;
+}
+.viewdetails{
+    margin-top: 10px;
+    padding: 10px 20px; 
+    background-color: transparent;
+    color: #FCEE0A;
+    border: 1px solid #FCEE0A;
+    box-shadow: 0 0 5px #FCEE0A;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+}
+.game-card:hover{
+    border: 1px solid #FCEE0A ;
+
+}
+.game-card:hover img{
+    box-shadow: 0 0 10px #FCEE0A;
+    
+}
+.viewdetails:hover{
+    cursor: pointer;
+    background-color: #FCEE0A;
+    color: #0a0f14;
+    box-shadow: 0 0 20px #FCEE0A;
+    transition: all 0.3s ease;
+}
+
+#footer{
+    width: 100%;
+    /* allow height to grow if items wrap */
+    display: flex;
+    flex-direction: row;
+    align-items: center;    /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    border-top: 1px solid rgba(252, 238, 10, 0.3);
+    background-color: #0A0F14CC;
+    backdrop-filter: blur(1px);
+    position: fixed;
+    bottom: 0px;
+    padding: 0.8rem 1rem;
+    gap: 2rem;
+}
+
+/* social icons container (matches HTML id="social") */
+#social{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+#social span{
+    color: #D1D5DB;
+    margin-right: 0.4rem;
+}
+#social a img{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.25rem;
+}
+
+/* links container */
+#links{
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#links a{
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 2px 6px;
+}
+#links a:hover{
+    text-decoration: underline;
+    color: #FCEE0A;
+}
+#copyright p{
+    margin: 0;
+    color: #9CA3AF;
+}
+#social{
+    justify-content: center;
+    margin: 50px;
+}
+#links{
+    border-top: 1px solid #00F0FF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    justify-content: center;
+    margin: 50px;
+    padding: 30px auto;
+}
+
+/* Responsive: stack footer items on narrow screens */
+@media (max-width: 700px){
+    #footer{
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: center;
+    }
+}
