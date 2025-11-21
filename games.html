@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="games.css">
 </head>
 <body>
     <header>
@@ -37,6 +38,19 @@
     <main id="main">
         <div id="gamesarea">
             <h1 class="allgames" style="color: #FCEE0A;text-shadow: 0 0 5px #FCEE0A; font-size: 45px;">Games Library</h1>
+        </div>
+        <div id="searchbar">
+            <input type="text" id="search-input" placeholder="Search for games...">
+            <select name="genre-filter">
+                <option value="">All Genres</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="rpg">RPG</option>
+                <option value="fps">FPS</option>
+                <option value="horror">Horror</option>
+                <option value="battle-royale">Battle Royale</option>
+                <option value="creative">Creative</option>
+            </select>
         </div>
             <div id="featuredgames">
                 <div class="game-card">
@@ -142,7 +156,7 @@
     </main>
     <hr>
     <footer>
-        <div id="footer"></div>
+        <div>
             <div id="social">
                 <span>Follow us on:</span>
                 <a href="#"><img src="icons8-youtube-logo-64.png" height="45px" alt="youtube"></a>

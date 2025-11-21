@@ -6,9 +6,8 @@ body{
     background-size: 50px 50px;
 }
 body {
-    padding-bottom: 120px; /* space for fixed footer */
+    padding-bottom: 120px; 
 }
-/* HEADER STYLE */
 #header{
     width: 100%;
     height: 100px;
@@ -126,6 +125,8 @@ body {
 }
             
                        /* HEADER STYLE COMPLETE */
+
+                       /* MAIN STYLE */ */
                     
 main {
     padding-top: 100px;
@@ -137,7 +138,7 @@ main {
 
 #gamesarea{
     text-align: center;
-    padding: 9rem 5rem 3rem 5rem ; /* keep games area 9rem from top so it doesn't sit under the fixed header */
+    padding: 9rem 5rem 3rem 5rem ; 
 }
 .allgames{
     font-size: 40px;
@@ -155,7 +156,6 @@ main {
     margin-right: 30px;
 }
 
-/* Match the exact card styles from index.css */
 .game-card{
     background-color: #0A0F14CC;
     backdrop-filter: blur(5px);
@@ -169,17 +169,15 @@ main {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease; /* smooth zoom and shadow */
+    transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease; 
     transform-origin: center center;
 }
 .game-card:hover img{
-    transform: scale(1.06); /* subtle zoom */
+    transform: scale(1.06); 
     box-shadow: 0 8px 20px rgba(255,0,127,0.08), 0 0 10px rgba(252,238,10,0.12);
 }
-
-/* place the last game card in the middle column */
 #games .game-card:last-child{
-    grid-column: 2 / 3; /* put it in the center column */
+    grid-column: 2 / 3;
     justify-self: center;
 }
 .gamecard{
@@ -220,12 +218,10 @@ main {
 }
 
 #footer{
-    width: 100%;
-    /* allow height to grow if items wrap */
     display: flex;
     flex-direction: row;
-    align-items: center;    /* vertical centering */
-    justify-content: center; /* horizontal centering */
+    align-items: center;   
+    justify-content: center; 
     border-top: 1px solid rgba(252, 238, 10, 0.3);
     background-color: #0A0F14CC;
     backdrop-filter: blur(1px);
@@ -235,7 +231,7 @@ main {
     gap: 2rem;
 }
 
-/* social icons container (matches HTML id="social") */
+
 #social{
     display: flex;
     align-items: center;
@@ -278,18 +274,66 @@ main {
     margin: 50px;
 }
 #links{
-    border-top: 1px solid #00F0FF;
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
     border-bottom: 1px solid rgba(255, 255, 255, 0.11);
     justify-content: center;
     margin: 50px;
     padding: 30px auto;
 }
 
-/* Responsive: stack footer items on narrow screens */
 @media (max-width: 700px){
     #footer{
         flex-direction: column;
         gap: 0.6rem;
         align-items: center;
+    }
+}
+#searchbar{
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    margin: 0 auto 3rem; 
+    background-color: rgba(10, 15, 20, 0.8);
+    border: 1px solid rgba(252, 238, 10, 0.3);
+    border-radius: 4px;
+    align-items: center; 
+    max-width: 1100px; 
+}
+#searchbar:hover{
+    border: 1px solid #FCEE0A;
+}
+#search-input{
+    background-color: rgba(10, 15, 20, 0.7);
+    border: 1px solid rgba(0, 234, 255, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    flex: 1 1 auto; 
+    min-width: 0; 
+    height: 2.6rem; 
+    font-size: 18px;
+    text-align: left;
+    color: #e0e0e0;
+    box-sizing: border-box;
+}
+#searchbar select{
+    background-color: rgba(10, 15, 20, 0.7);
+    border: 1px solid rgba(0, 234, 255, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    flex: 0 0 200px; 
+    font-size: 16px;
+    color: #e0e0e0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 760px){
+    #searchbar{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    #searchbar select{
+        flex: 0 0 auto;
+        width: 100%;
     }
 }
