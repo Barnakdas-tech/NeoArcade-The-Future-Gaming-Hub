@@ -4,7 +4,9 @@ body{
     font-family:'Roboto', "sans-serif" ;
     background-image:linear-gradient(rgba(252, 238, 10, 0.03) 1px, transparent 1px),linear-gradient(90deg, rgba(252, 238, 10, 0.03) 1px, transparent 1px) ;
     background-size: 50px 50px;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for theme */
 }
+
 /* HEADER STYLE */
 #header{
     width: 100%;
@@ -13,7 +15,6 @@ body{
     position: fixed;
     flex-direction: row;
     align-items: center;
-    z-index: 100px;
     justify-content: space-around;
     z-index: 50;
     top: 0px;
@@ -112,7 +113,8 @@ body{
     text-shadow: 0 0 5px #FF007F;
 }
 #theme-toggle{
-    z-index: 5px;
+    position: relative;
+    z-index: 5;
     background-color: transparent;
     border: none;
     border-radius: 50%;
@@ -135,8 +137,6 @@ body{
     align-items: center;
     padding: 10rem 5rem 0 5rem;
     margin-bottom: 5px;
-    
-    
 }
 
 #gamesarea{
@@ -145,19 +145,20 @@ body{
 }
 #tag{
     display: flex;
-    
 }
 #welcome{
     font-size: 50px;
     color: #FCEE0A;
     text-shadow: 0 0 5px #FCEE0A;
     margin-right: 6px;
+    transition: color 0.3s;
 }
 #future{
     font-size: 50px;
     color: #FF007F;
     text-shadow: 0 0 5px #FCEE0A;
     margin-left: 6px;
+    transition: color 0.3s;
 }
 main{
     text-align: center;
@@ -172,7 +173,6 @@ main{
 #browsegame{
     margin-top: 50px;
     height: 100px;
-    
 }
 #browse{
     width: auto;
@@ -231,7 +231,7 @@ main{
     width: 100%;
     height: auto;
     border-radius: 8px;
-        transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease; 
+    transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease; 
     transform-origin: center center;
 }
 .game-card:hover img{
@@ -531,7 +531,83 @@ main{
     }
 }
 
+                             /*  LIGHT MODE */
+body.light-mode {
+    background-color: #FAFAFA; 
+    color: #2D0036; 
+    background-image: linear-gradient(rgba(255, 0, 127, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 234, 255, 0.05) 1px, transparent 1px);
+}
 
+body.light-mode #header {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #FF007F; 
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.1);
+}
 
+/* Nav links in light mode */
+body.light-mode #home1,
+body.light-mode #game1,
+body.light-mode #news1,
+body.light-mode #contact1,
+body.light-mode #about1 {
+    color: #4A0E4E; 
+    font-weight: 600;
+}
 
+body.light-mode #home1:hover, 
+body.light-mode #game1:hover, 
+body.light-mode #news1:hover, 
+body.light-mode #contact1:hover, 
+body.light-mode #about1:hover {
+    color: #00EAFF; 
+    text-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+}
 
+/* Game Cards */
+body.light-mode .game-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 5px 5px 0px rgba(255, 0, 127, 0.1); 
+    transition: all 0.3s ease;
+}
+
+body.light-mode .game-card:hover {
+    transform: translateY(-5px);
+    border-color: #00EAFF;
+    box-shadow: 8px 8px 0px #00EAFF; 
+}
+
+body.light-mode .gamecard { 
+    color: #FF007F;
+    text-shadow: none;
+}
+
+body.light-mode .genre {
+    color: #7B2CBF; 
+}
+
+body.light-mode .viewdetails {
+    color: #FF007F;
+    border: 1px solid #FF007F;
+    box-shadow: none;
+}
+
+body.light-mode .viewdetails:hover {
+    background-color: #FF007F;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+}
+
+body.light-mode #portal {
+    color: #4A0E4E;
+}
+
+/* Update Footer in light mode */
+body.light-mode #footer {
+    background-color: #ffffff;
+    border-top: 2px solid #FF007F;
+}
+body.light-mode #links a {
+    color: #4A0E4E;
+}

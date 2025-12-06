@@ -339,3 +339,36 @@ main {
         width: 100%;
     }
 }
+
+/* DYNAMIC LIGHT MODE (GAMES PAGE) */
+
+/* Search Bar Container */
+body.light-mode #searchbar {
+    background-color: #ffffff;
+    border-color: #FF007F;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Search Input & Select Dropdown */
+body.light-mode #search-input,
+body.light-mode #genre-filter {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light-mode #search-input::placeholder {
+    color: #666;
+}
+
+body.light-mode #search-input:focus,
+body.light-mode #genre-filter:focus {
+    border-color: #00EAFF; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+}
+
+body.light-mode #gamesarea h1 {
+    color: #FF007F;
+    text-shadow: none;
+}

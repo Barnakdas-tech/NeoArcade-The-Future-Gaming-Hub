@@ -548,3 +548,114 @@ main h2 {
     }
 }
 
+
+/* DYNAMIC LIGHT MODE (CONTACT PAGE) */
+
+body.light-mode {
+    background-color: #FAFAFA;
+    color: #2D0036;
+    background-image: linear-gradient(rgba(255, 0, 127, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 234, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Header Override for Light Mode */
+body.light-mode #header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #FF007F;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.1);
+}
+
+body.light-mode #home1,
+body.light-mode #game1,
+body.light-mode #news1,
+body.light-mode #contact1,
+body.light-mode #about1 {
+    color: #4A0E4E; 
+}
+
+body.light-mode #home1:hover, 
+body.light-mode #game1:hover, 
+body.light-mode #news1:hover, 
+body.light-mode #contact1:hover, 
+body.light-mode #about1:hover {
+    color: #00EAFF; 
+    text-shadow: 0 0 5px rgba(0, 234, 255, 0.5);
+}
+
+/* Contact Specifics */
+body.light-mode h1 {
+    color: #FF007F; 
+    text-shadow: none;
+}
+
+body.light-mode h2 {
+    color: #7B2CBF; 
+}
+
+/* Form Styling Light Mode */
+body.light-mode #contact-form {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 5px 5px 0px rgba(255, 0, 127, 0.1);
+}
+
+body.light-mode label {
+    color: #4A0E4E;
+}
+
+body.light-mode input, 
+body.light-mode textarea {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light-mode input:focus, 
+body.light-mode textarea:focus {
+    border-color: #00EAFF;
+    box-shadow: 0 0 8px rgba(0, 234, 255, 0.4);
+    outline: none;
+}
+
+body.light-mode #sendbtn {
+    background-color: transparent;
+    color: #FF007F;
+    border: 2px solid #FF007F;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+body.light-mode #sendbtn:hover {
+    background-color: #FF007F;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+}
+
+/* Info Cards Light Mode */
+body.light-mode #ourhq, 
+body.light-mode #contactinfo, 
+body.light-mode #socialmedia {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 5px 5px 0px rgba(0, 234, 255, 0.1); 
+}
+
+body.light-mode #ourhq:hover, 
+body.light-mode #contactinfo:hover, 
+body.light-mode #socialmedia:hover {
+    border-color: #00EAFF;
+    transform: translateY(-3px);
+}
+
+body.light-mode #content {
+    color: #555;
+}
+
+/* Footer Light Mode */
+body.light-mode #footer {
+    background-color: #ffffff;
+    border-top: 1px solid #FF007F;
+}
+body.light-mode #links a {
+    color: #4A0E4E;
+}
